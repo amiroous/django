@@ -12,8 +12,14 @@ brew install python3
 # Install Pipenv
 pip3 install pipenv
 
-# Install Django Package
-pipenv install django
+# Create `requirements.txt` File
+_Create a `requirements.txt` file and list all the dependencies you want to install_
+django-jinja==2.4.1
+Django==2.2.5
+Jinja2==2.10.1
+
+# Install Dependency Packages
+pipenv install -r requirements.txt
 
 # Activate the Virtual Environment (to exit run `exit`)
 pipenv shell
@@ -37,13 +43,22 @@ python application/manage.py runserver
 Anytime we run a command starting by `python` for Django, the path is relative to the place `manage.py` exists.
 ```
 
-#### Debug Notes:
+#### Notes:
 
 - Error on Pipenv Commands:
     + Delete `~/.pyenv/versions/.DS_Store`
+
+- Django Structure Issues:
+    + https://wsvincent.com/django-tips-template-structure/
+
+- Django Best Practices:
+    + https://www.toptal.com/django/django-top-10-mistakes
 
 
 #### Resources
 - https://www.djangoproject.com/
 - https://djangoforbeginners.com/
 - https://realpython.com/tutorials/django/
+- https://docs.pipenv.org/en/latest/basics/
+- https://niwinz.github.io/django-jinja/latest/
+- https://medium.com/@djstein/modern-django-part-1-project-refactor-and-meeting-the-django-settings-api-d2784efb606f

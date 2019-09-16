@@ -15,6 +15,11 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+TEMPLATE_DIRS = [
+    os.path.join(BASE_DIR, 'project/templates'),
+    os.path.join(BASE_DIR, 'project/app_1/templates'),
+    os.path.join(BASE_DIR, 'project/app_2/templates'),
+]
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
@@ -29,17 +34,25 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
-
-INSTALLED_APPS = [
+DJANGO_APPS = (
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+)
+
+THIRD_PARTY_APPS = (
+    'django_jinja',
+)
+
+LOCAL_APPS = (
     'project.app_1',
     'project.app_2',
-]
+)
+
+INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -54,6 +67,14 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'project.urls'
 
 TEMPLATES = [
+    {
+        'BACKEND': 'django_jinja.backend.Jinja2',
+        'DIRS': TEMPLATE_DIRS,
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'match_extension': '.jinja.html',
+        },
+    },
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [],

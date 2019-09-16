@@ -1,6 +1,8 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 
 
 def index(request):
-    return HttpResponse('Django App 1 >> Index')
+    data = {
+        'header': 'This is Dynamic Message from Data Context to App 1'
+    }
+    return render(request, 'app_1/index.jinja.html', context=data)

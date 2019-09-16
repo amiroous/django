@@ -6,8 +6,9 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-django = "*"
-project = "*"
+django-jinja = "==2.4.1"
+Django = "==2.2.5"
+Jinja2 = "==2.10.1"
 
 [requires]
 python_version = "3.7"
