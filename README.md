@@ -30,7 +30,11 @@ python ../../application/manage.py startapp <APP_NAME>
 # Edit django/application/project/settings.py => INSTALLED_APPS = [..., '<PROJECT_NAME>.<APP_NAME>',]
 
 # Run Django’s Local Web Server
+cd ../..
 python application/manage.py runserver
+
+# NOTE:
+Anytime we run a command starting by `python` for Django, the path is relative to the place `manage.py` exists.
 ```
 
 #### Debug Notes:
