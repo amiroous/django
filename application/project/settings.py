@@ -21,6 +21,8 @@ TEMPLATE_DIRS = [
     os.path.join(BASE_DIR, 'project/app_2/templates'),
 ]
 
+STATIC_DIRS = os.path.join(BASE_DIR, 'project/static')
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
@@ -140,4 +142,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = '/static/' # Mapped to STATICFILES_DIRS Path
+STATICFILES_DIRS = [
+    STATIC_DIRS,
+]
