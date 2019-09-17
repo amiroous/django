@@ -54,9 +54,15 @@ Anytime we run a command starting by `python` for Django, the path is relative t
 - Django Best Practices:
     + https://www.toptal.com/django/django-top-10-mistakes
 
+- Django Database Setup with PostgreSQL:
+    + Install [PostgreSQL](https://pypi.org/project/postgres/)
+    + Install [psycopg2](https://pypi.org/project/psycopg2/)
+    + Guide https://tutorial-extensions.djangogirls.org/en/optional_postgresql_installation/
+
 
 #### Resources
 - https://www.djangoproject.com/
+- https://legacy.gitbook.com/@djangogirls
 - https://djangoforbeginners.com/
 - https://realpython.com/tutorials/django/
 - https://docs.pipenv.org/en/latest/basics/
