@@ -68,3 +68,17 @@ Anytime we run a command starting by `python` for Django, the path is relative t
 - https://docs.pipenv.org/en/latest/basics/
 - https://niwinz.github.io/django-jinja/latest/
 - https://medium.com/@djstein/modern-django-part-1-project-refactor-and-meeting-the-django-settings-api-d2784efb606f
+
+
+
+
+#### Default Django Project Structure:
+```
+PROJECT_NAME/
+    PROJECT/
+        __init__.py
+        settings.py
+        url.py
+        wsgi.py
+    manage.py
+```

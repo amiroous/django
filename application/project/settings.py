@@ -67,6 +67,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'project.urls'
+ROOT_URLCONF = 'project.urls'
 
 TEMPLATES = [
     {
