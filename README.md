@@ -72,7 +72,7 @@ Anytime we run a command starting by `python` for Django, the path is relative t
 
 
 
-#### Default Django Project Structure:
+#### Project Structure:
 ```
 PROJECT_NAME/
     PROJECT/
@@ -82,3 +82,5 @@ PROJECT_NAME/
         wsgi.py
     manage.py
 ```
+
+

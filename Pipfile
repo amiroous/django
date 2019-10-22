@@ -8,10 +8,11 @@ verify_ssl = true
 [packages]
 django-jinja = "==2.4.1"
 postgres = "==2.2.2"
-psycopg2 = "==2.8.3"
+psycopg2 = "==2.8.4"
 Django = "==2.2.5"
 Jinja2 = "==2.10.1"
 Faker = "==2.0.2"
+psycopg2-binary = "==2.8.4"
 
 [requires]
 python_version = "3.7"

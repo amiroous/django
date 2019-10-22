@@ -1,7 +1,7 @@
-# import os
-# os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'project.settings')
-# import django
-# django.setup()
+import os
+os.environ['DJANGO_SETTINGS_MODULE'] = 'project.settings'
+import django
+django.setup()
 
 import random
 from faker import Faker
