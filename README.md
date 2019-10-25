@@ -61,13 +61,14 @@ Anytime we run a command starting by `python` for Django, the path is relative t
 - DB Migration
     + https://realpython.com/django-migrations-a-primer/
   ```
-  python manage.py makemigrations
-  python manage.py migrate
+  python application/manage.py makemigrations
+  python application/manage.py migrate
   ```
     
 - Flush the DB Records:
   ```
   python application/manage.py flush
+  python application/manage.py createsuperuser
   ```
 
 - Django Structure Issues:

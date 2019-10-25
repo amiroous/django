@@ -1,8 +1,12 @@
 from django.shortcuts import render
+from project.app_2.models import User
 
 
 def index(request):
+    users = User.objects.order_by('email')
+
     data = {
-        'header': 'This is Dynamic Message from Data Context to App 2'
+        'users': users
     }
+
     return render(request, 'app_2/index.jinja.html', context=data)

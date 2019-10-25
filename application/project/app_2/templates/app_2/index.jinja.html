@@ -3,5 +3,12 @@
 {% block title %} App 2{% endblock %}
 
 {% block body %}
-    <h1>{{header}}</h1>
+    <h1>App 2</h1>
+    {% if users %}
+        {% for user in users %}
+            <p>{{ user.email }}</p>
+        {% endfor %}
+    {% else %}
+        <p>No Users Found!</p>
+    {% endif %}
 {% endblock %}

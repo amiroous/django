@@ -32,6 +32,6 @@ def populate(n=5):
 
 
 if __name__ == '__main__':
-    print('Populating Script...')
+    print('Populating App 1 Script...')
     populate(20)
-    print('Populating Completed.')
+    print('Populating App 1 Completed.')
