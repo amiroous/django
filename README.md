@@ -43,10 +43,32 @@ python application/manage.py runserver
 Anytime we run a command starting by `python` for Django, the path is relative to the place `manage.py` exists.
 ```
 
+
+
+#### Connect Django MTV (Model, Template, View) Together
+1. Import Models in `views.py`
+2. Query for data in `views.py`
+3. Pass the data from `view.py` to template
+4. Update the template to show/use the received data
+5. Map a URL to the view
+
+
 #### Notes:
 
 - Error on Pipenv Commands:
     + Delete `~/.pyenv/versions/.DS_Store`
+
+- DB Migration
+    + https://realpython.com/django-migrations-a-primer/
+  ```
+  python manage.py makemigrations
+  python manage.py migrate
+  ```
+    
+- Flush the DB Records:
+  ```
+  python application/manage.py flush
+  ```
 
 - Django Structure Issues:
     + https://wsvincent.com/django-tips-template-structure/

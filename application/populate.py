@@ -28,7 +28,7 @@ def populate(n=5):
         fake_name = faker.domain_name()
 
         web_page = WebPage.objects.get_or_create(topic=topic, name=fake_name, url=fake_url)[0]
-        access_record = AccessRecord.objects.get_or_create(name=web_page, date=fake_date)
+        access_record = AccessRecord.objects.get_or_create(webpage=web_page, date=fake_date)
 
 
 if __name__ == '__main__':

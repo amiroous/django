@@ -3,5 +3,21 @@
 {% block title %} App 1{% endblock %}
 
 {% block body %}
-    <h1>{{header}}</h1>
+    <h1>App 1</h1>
+    {% if access_records %}
+    <table>
+        <thead>
+            <th>Site Name</th>
+            <th>Date Accessed</th>
+        </thead>
+        {% for access_record in access_records %}
+        <tr>
+            <td>{{ access_record.webpage }}</td>
+            <td>{{ access_record.date }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+        <p>No Access Records Found!</p>
+    {% endif %}
 {% endblock %}

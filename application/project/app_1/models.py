@@ -18,7 +18,7 @@ class WebPage(models.Model):
 
 
 class AccessRecord(models.Model):
-    name = models.ForeignKey(WebPage, on_delete=models.DO_NOTHING)
+    webpage = models.ForeignKey(WebPage, on_delete=models.DO_NOTHING, null=True)
     date = models.DateField()
 
     def __str__(self):
